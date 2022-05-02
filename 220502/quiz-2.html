@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>연습문제 2</title>
+</head>
+<body>
+	<script>
+		let num01 = parseInt(prompt("비교할 첫 번째 숫자"));
+		let num02 = parseInt(prompt("비교할 두 번째 숫자"));
+		function compare(num01, num02){
+			if(num01 > num02){
+				alert(num01 + "(이)가 " + num02 + "보다 큽니다.")
+			}else if(num01 === num02){
+				alert("같습니다.")
+			}else{
+				alert(num02 + "(이)가 " + num01 + "보다 큽니다.")
+			}
+		}
+		compare(num01, num02);
+	</script>
+</body>
+</html>
