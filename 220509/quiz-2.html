@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>연습문제 2</title>
+	<style>
+		input{
+			width : 25px;
+		}
+		table, td{
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+		td{
+			width: 50px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<form action="#">
+		<input type="text" id="row">행
+		<input type="text" id="col">열
+		<button onclick = "drawTable(); return false;">작성</button>
+	</form>
+	<div id="contents"></div>
+	<script>
+		function drawTable(){
+			let row = document.querySelector('#row').value;
+			let col = document.querySelector('#col').value;
+
+			let table = document.createElement('table');
+			for(let i = 0; i < row; i++){
+				let tr = document.createElement('tr');
+				for(let j = 0; j < col; j++){
+					let td = document.createElement('td');
+					let txt = document.createTextNode(i + ", " + j);
+					td.appendChild(txt);
+					tr.appendChild(td);
+				}
+				table.appendChild(tr);
+			}
+			document.querySelector('div').appendChild(table);
+		}
+	</script>
+</body>
+</html>
